@@ -1,5 +1,6 @@
 import json
 
+# This should be changed to a private RPC that doesn't have rate limit
 AVAX_RPC = "https://api.avax.network/ext/bc/C/rpc"
 
 # The last block where none of the token existed
