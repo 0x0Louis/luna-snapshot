@@ -6,6 +6,7 @@ AVAX_RPC = "https://api.avax.network/ext/bc/C/rpc"
 # The last block where none of the token existed
 START_BLOCK = 8_536_961
 PRE_ATTACK_BLOCK = 14_390_889
+MIDDLE_ATTACK_BLOCK = 14_719_089
 POST_ATTACK_BLOCK = 15_208_591
 
 MAX_RETRY = 10
@@ -14,6 +15,11 @@ assert NB_BLOCK <= 2048
 
 ADDRESS_ZERO = "0x0000000000000000000000000000000000000000"
 MCJV3_ADDRESS = "0x188bED1968b795d5c9022F6a0bb5931Ac4c18F00"
+BORING_HELPER_ADDRESS = "0xce63ECA0C8A2084C1BaEcE7737dB88f10c412c5E"
+
+with open("utils/abi/boring_helper_v1.json", "r") as f:
+    BORING_HELPER_ABI = json.load(f)
+
 
 with open("utils/abi/pair_abi.json", "r") as f:
     PAIR_ABI = json.load(f)
@@ -50,3 +56,5 @@ pairs = {
     "UST.axl-USDT.e": "0xcfbe608de55e4869867aa0ab5777e65b55f52ce4",
     "UST.axl-USDC.e": "0xa3a029224857bf467e896523e268a5fc005ce810",
 }
+
+pids = [45, 49, 66]
